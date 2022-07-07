@@ -264,7 +264,7 @@ export class MagicItem {
     }
 
     compatible(entity) {
-        return (['spell', 'feat'].includes(entity.type) || entity.entity === 'RollTable')
+        return (['power', 'feat'].includes(entity.type) || entity.entity === 'RollTable')
             && !this.hasItem(entity.id);
     }
 
@@ -272,7 +272,7 @@ export class MagicItem {
         let name = game.modules.has('babele') && entity.getFlag('babele','hasTranslation') ?
                 entity.getFlag('babele','originalName') :
                 entity.name;
-        if(entity.type === "spell") {
+        if(entity.type === "power") {
             this.addSpell({
                 id: entity.id,
                 name: name,
@@ -459,7 +459,7 @@ class MagicItemTable extends MagicItemEntry {
                     }).then(chatData => {
                         ChatMessage.create(
                             mergeObject(chatData, {
-                                "flags.dnd5e.itemData": item.data
+                                "flags.sw5e.itemData": item.data
                             })
                         );
                     });
@@ -892,8 +892,8 @@ class AbstractOwnedEntry {
         if ( save?.ability ) {
             if ( save.scaling === "spell" ) save.dc = data.attributes.spelldc;
             else if ( save.scaling !== "flat" ) save.dc = data.abilities[save.scaling]?.dc ?? 10;
-            const ability = CONFIG.DND5E.abilities[save.ability];
-            item.labels.save = game.i18n.format("DND5E.SaveDC", {dc: save.dc || "", ability});
+            const ability = CONFIG.SW5E.abilities[save.ability];
+            item.labels.save = game.i18n.format("SW5E.SaveDC", {dc: save.dc || "", ability});
         }
     }
 }
@@ -950,7 +950,7 @@ class OwnedMagicItemSpell extends AbstractOwnedEntry {
             });
             ChatMessage.create(
                 mergeObject(chatData, {
-                    "flags.dnd5e.itemData": this.ownedItem.data.toJSON()
+                    "flags.sw5e.itemData": this.ownedItem.data.toJSON()
                 })
             );
             this.consume(consumption);
@@ -1006,7 +1006,7 @@ class OwnedMagicItemFeat extends AbstractOwnedEntry {
             });
             ChatMessage.create(
                 mergeObject(chatData, {
-                    "flags.dnd5e.itemData": this.ownedItem.data.toJSON()
+                    "flags.sw5e.itemData": this.ownedItem.data.toJSON()
                 })
             );
             onUsage();

@@ -54,8 +54,8 @@ export class MagicItemTab {
                 this.app.form.ondrop = (ev) => this._onDrop(ev);
             } else {
                 let me  = this;
-                let originalDrop = this.app._onDrop;
-                this.app._onDrop = function (evt) {
+                let originalDrop = this.app.form.ondrop;
+                this.app.form.ondrop = function (evt) {
                     if(me.isActive()) {
                         return me._onDrop(evt);
                     } else {

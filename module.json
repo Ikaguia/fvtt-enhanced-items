@@ -1,12 +1,12 @@
 {
-	"name": "magicitems",
-	"title": "Magic Items",
+	"name": "fvtt-enhanced-items",
+	"title": "Enhanced Items",
 	"description": "Module that adds the ability to create magical items with spells or feats that belong to the item itself, such as staffs or magic wands, which will be automatically inherited from the character who owns the item.",
 	"version": "2.2.1",
 	"minimumCoreVersion" : "9",
 	"compatibleCoreVersion" : "9",
-	"systems": ["dnd5e"],
-	"author": "Simone",
+	"systems": ["sw5e"],
+	"authors": ["Simone", "Ikaguia"],
 	"esmodules": ["magicitems.js"],
 	"scripts": [],
 	"styles": [
@@ -44,23 +44,23 @@
 	"packs": [{
 		"name": "magicitems",
 		"label": "Magic Items",
-		"system": "dnd5e",
+		"system": "sw5e",
 		"path": "./packs/magic-items.db",
 		"entity": "Item"
 	}, {
 		"name": "magicitem-feats",
 		"label": "Magic Items: Item Feats",
-		"system": "dnd5e",
+		"system": "sw5e",
 		"path": "./packs/magic-items-item-feats.db",
 		"entity": "Item"
 	}, {
 		"name": "magicitem-tables",
 		"label": "Magic Items: Item Tables",
-		"system": "dnd5e",
+		"system": "sw5e",
 		"path": "./packs/magic-items-item-tables.db",
 		"entity": "RollTable"
 	}],
-	"url": "https://gitlab.com/riccisi/foundryvtt-magic-items",
-	"manifest": "https://gitlab.com/riccisi/foundryvtt-magic-items/raw/master/module/module.json",
-	"download": "https://gitlab.com/riccisi/foundryvtt-magic-items/-/jobs/artifacts/2.2.1/raw/magic-items.zip?job=build"
+	"url": "https://github.com/Ikaguia/fvtt-enhanced-items",
+	"manifest": "https://raw.githubusercontent.com/ikaguia/main/module.json",
+	"download": "https://github.com/Ikaguia/fvtt-enhanced-items/archive/main.zip"
 }

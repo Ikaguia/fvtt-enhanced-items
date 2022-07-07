@@ -76,7 +76,7 @@ Hooks.on("hotbarDrop", async (bar, data, slot) => {
             type: "script",
             img: data.img,
             command: command,
-            flags: {"dnd5e.itemMacro": true}
+            flags: {"sw5e.itemMacro": true}
         }, {displaySheet: false});
     }
     game.user.assignHotbarMacro(macro, slot);

@@ -6,7 +6,7 @@ export class MagicItemUpcastDialog extends Dialog {
 
     constructor(item, dialogData={}, options={}) {
         super(dialogData, options);
-        this.options.classes = ["dnd5e", "dialog"];
+        this.options.classes = ["sw5e", "dialog"];
         this.item = item;
     }
 

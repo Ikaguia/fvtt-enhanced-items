@@ -1,3 +1,7 @@
+# FoundryVTT - Enhanced Items
+
+This is a fork of `FoundryVTT - Magic items` for the sw5e system, bellow is the original readme file
+
 # FoundryVTT - Magic Items
 
 This module for Foundry VTT and specific for the **DnD5e system**, adds the ability to create magical items with spells or feats that belong to the item itself, such as staffs or 
